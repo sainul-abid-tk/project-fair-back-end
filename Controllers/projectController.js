@@ -9,7 +9,7 @@ exports.addProjects=async(req,res)=>{
     try{
         const existingProject=await projects.findOne({github})
         if(existingProject){
-            res.status(406).json("Project already exist in our coolection!!! please upload another")
+            res.status(406).json("Project already exist in our collection!!! please upload another")
         }
         else{
             const newProject=new projects({
