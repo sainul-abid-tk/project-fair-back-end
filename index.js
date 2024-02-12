@@ -11,7 +11,7 @@ pfServer.use(express.json())
 pfServer.use(router)
 pfServer.use('/uploads',express.static('./uploads'))
 
-const PORT=3000
+const PORT=3000 || process.env.PORT
 
 pfServer.listen(PORT,()=>{
     console.log(`Project fair started at port:${PORT}`);
